@@ -7,21 +7,28 @@ $(function()
 
     var addSection = function(title, showTitle, subTitles)
     {
-        console.log(title);
+        section = "";
         if (showTitle != false) {
-            $(".cv").append("<div class=\"title\"> <p>" + title + "</p>");
+            section += "<div id=\"title\" class=\"title\"><p class=\"header\">" + title + "</p>";
+            $.each(subTitles, function(index, value)
+            {
+                section += "<div class = \"section\"><p><label class=\"subTitle\">" + value + "</label><input class=\"record\"></p></div>";
+            });
+            section += "</div>";
+
+            $(".cv").append(section);
+        }
+        else{
+            $.each(subTitles, function(index, value)
+            {
+                section += "<div class = \"section\"><p><label class=\"subTitle\">" + value + "</label><input class=\"record\"></p></div>";
+            });
+            $(section).appendTo(".cv").find("#"+title);
         }
 
-        console.log(subTitles);
-        $.each(subTitles, function(index, value)
-        {
-            console.log(index + ":" + value);
-            $(".cv").append("<div class=\"section\"><p><label class=\"subTitle\">" + value + "</label><input class=\"record\"></p></div>");
-        });
 
-        if (showTitle != false) {
-            $(".cv").append("</div>");
-        }
+
+
     };
 
     var addGenerateButton = function()
@@ -46,7 +53,7 @@ $(function()
 
         addSection("Languages", false, ["language", "level"]);
 
-        addSection("IT", true, ["descritpion"]);
+        addSection("IT", true, ["description"]);
 
         addSection("Hobbies", true, ["description"]);
 
@@ -62,15 +69,43 @@ $(function()
 
     $(document).on("click", ".generate", function(event, data)
     {
+        jsonContent = {};
+        htmlContent = "";
+        j = 0;
 
-        $(".cv").find(":input").each(function(index, value)
+        $(".cv").find(".title").each(function(index, value)
         {
-            if ($(this).val() != "")
-                content += ";" + $(this).val();
+            currentJsonContent = new Object();
 
+            $(this).children(".header").each(function(index2, value2)
+            {
+                htmlContent += "<p>" + value2.innerHTML + "</p>";
+
+                currentJsonContent.title = value2.innerHTML;
+            });
+
+            i = 0;
+            currentJsonContent.records = {};
+            $(this).find(".subTitle").each(function(index2, value2)
+            {
+
+                label = value2.innerHTML;
+                recordValue = $(this).next().val();
+
+                htmlContent += "<p>" + label + " " + recordValue + "</p>";
+
+                var record = new Object();
+                record.label = label;
+                record.recordValue = recordValue;
+                currentJsonContent.records[i++] = record;
+            });
+
+            jsonContent[j++] = currentJsonContent;
         });
 
-        return JSON.stringify(content);
+        console.log(htmlContent);
+
+        console.log(JSON.stringify(jsonContent));
 
     });
 

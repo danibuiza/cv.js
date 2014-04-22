@@ -1,25 +1,32 @@
 cv.js (in progress) (the objective is just to learn how to use jquery)
 =====
 
+dependencies:
+-jquery
+
 Jquery based tool to generate cvs
 
-1 -  create cv
+-  create cv
 
-2 - cv contains sections
+- cv contains sections
 
-3 - section contains attributes
+- section contains attributes
 
-4 - all these can generate a json or an html
+- all these can generate a json or an html
+
+- search engine to retrieve cvs by passed parameters or labels
 
 
 todo:
 
-generate json and html
+-generate json and html
 
-css to generated content
+-css to generated content
 
-store cv in memory or db
+-store cv in memory or db
 
-retrieve list of cvs
+-retrieve list of cvs
+
+-search engine
 
 
