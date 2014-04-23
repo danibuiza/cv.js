@@ -1,0 +1,51 @@
+.content
+{
+    font-size   : x-large;
+    font-family : georgia, serif;
+    color       : blue;
+}
+
+.title_1
+{
+    font-size       : x-large;
+    font-family     : georgia, serif;
+    text-decoration : underline;
+}
+
+.title_2
+{
+    font-size       : large;
+    font-family     : georgia, serif;
+    text-decoration : underline;
+}
+
+.title_2_content
+{
+    font-size   : medium;
+    font-family : "courier new", courier;
+}
+
+.link
+{
+    color     : blue;
+    font-size : medium;
+}
+
+.email
+{
+    color     : orangered;
+    font-size : medium;
+}
+
+.menu_and_content
+{
+    float : left;
+    width : 50%;
+}
+
+.preview
+{
+    float : right;
+    width : 50%;
+
+}

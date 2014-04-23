@@ -2,8 +2,11 @@
  * Created by dgutierrez-diez on 22.04.14.
  */
 
+
 $(function()
 {
+
+
 
     var addSection = function(title, showTitle, subTitles)
     {
@@ -18,16 +21,13 @@ $(function()
 
             $(".cv").append(section);
         }
-        else{
+        else {
             $.each(subTitles, function(index, value)
             {
                 section += "<div class = \"section\"><p><label class=\"subTitle\">" + value + "</label><input class=\"record\"></p></div>";
             });
-            $(section).appendTo(".cv").find("#"+title);
+            $(section).appendTo(".cv").find("#" + title);
         }
-
-
-
 
     };
 
@@ -105,9 +105,10 @@ $(function()
 
         console.log(htmlContent);
 
+        $(".result_html").append(htmlContent);
+
         console.log(JSON.stringify(jsonContent));
 
     });
 
-})
-;
+});
