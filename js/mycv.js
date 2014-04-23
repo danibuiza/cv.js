@@ -5,6 +5,8 @@
 
 $(function()
 {
+    $(".footer").show().appendTo($(".menu_and_content"));
+
     $(".title_1").click(function()
     {
         $(".title_2_content").toggle();

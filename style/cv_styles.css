@@ -19,6 +19,12 @@
     text-decoration : underline;
 }
 
+.footer_text
+{
+    font-size       : x-small;
+    font-family     : Cambria;
+}
+
 .title_2_content
 {
     font-size   : medium;
@@ -49,3 +55,5 @@
     width : 50%;
 
 }
+
+
