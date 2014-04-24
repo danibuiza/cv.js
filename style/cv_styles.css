@@ -56,4 +56,25 @@
 
 }
 
+#map_canvas {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    background-color: #CCC;
+
+}
+
+.professional_experience{
+    margin-left: 5px;
+}
+
+
+.place{
+    margin-left: 5px;
+}
+
+
+
+
+
 

@@ -4,7 +4,10 @@
     <title>Daniel Gutierrez Diez</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="../js/jquery.ui.map.js"></script>
     <script src="../js/mycv.js"></script>
+
     <link rel="stylesheet" type="text/css" href="../style/cv_styles.css">
 </head>
 <body>
@@ -15,19 +18,20 @@
     <div class="title_1_content">
         <p class="title_2">Personal Data and contact</p>
 
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="place">Oviedo, Spain</div>
+            <div class="place">Cadiz, Spain</div>
             <div class="date">15.12.1982</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="link">
                 about.me/danibuiza
             </div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="email">danibuiza@gmail.com</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">danibuiza in facebook, twitter, github, linkedin, xing...</div>
         </div>
     </div>
@@ -35,80 +39,80 @@
     <div class="title_1_content">
         <p class="title_2">Academics</p>
 
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Master in Computer Science</div>
             <div class="place">Universidad de Oviedo, Spain
             </div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Final Master Thesys</div>
             <div class="place">Comenius University of Bratislava, Slovakia
             </div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Specialist in Foreign Trade</div>
-            <div class="place">UNED</div>
+            <div class="place">UNED, Madrid, Spain</div>
         </div>
     </div>
 
-    <div class="title_1_content" hidden>
+    <div class="title_1_content">
         <p class="title_2">Professional Experience</p>
 
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="date">2013-Now</div>
-            - Product Lead - Interactive Data
+            <div class="professional_experience">Product Lead - Interactive Data</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="date">2008-2013</div>
-            - Software Engineer - Accenture
+            <div class="professional_experience">Software Engineer - Accenture</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="date">2007-2008</div>
-            - Software Engineer - MGM Group
+            <div class="professional_experience">Software Engineer - MGM Group</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="date">2006-2007</div>
-            - Software Engineer - Indra Group
+            <div class="professional_experience">Software Engineer - Indra Group</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <date>2005</date>
-            - Internship - Hidrocantabrico, EDP Group
+            <div class="professional_experience">Internship - Hidrocantabrico, EDP Group</div>
         </div>
     </div>
     <div class="title_1_content">
         <p class="title_2">Languages</p>
 
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">German, fluent</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">English, fluent</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Spanish, native</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Learning italian and french</div>
         </div>
     </div>
     <div class="title_1_content">
         <p class="title_2">IT</p>
 
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Java: Spring, Hibernate, Swing, JavaFX, TopLink, Velocity, db4o, JSP, JSFs,
                 Portlets
             </div>
         </div>
-        <div class="title_2_content" hidden>
-            <div class="sentence">Javascript: Jquery, Modernizr, Require.js, CSS, HTML</div>
+        <div class="title_2_content" style="display:none">
+            <div class="sentence">Javascript: Jquery, Backbone, Underscore, Modernizr, Require.js, CSS, HTML</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Other languages: Scala, PHP, C, C++, Groovy, Ruby</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">DBs: MySQL, SQL, MongoDB, Oracle</div>
         </div>
-        <div class="title_2_content" hidden>
+        <div class="title_2_content" style="display:none">
             <div class="sentence">Project tools: Git, GitHub, CVS, SVN, Jira, Quality Center, Eclipse, PHP
                 Storm,
                 NetBeans, Media Wiki, CMS
@@ -116,20 +120,65 @@
         </div>
     </div>
     <div class="title_1_content">
+        <p class="title_2">Finance</p>
+
+        <div class="title_2_content" style="display:none">
+            <div class="sentence">FX MM Products, Charts, Wealth Management solution, Calypso, Murex, Summit, Back
+                Office, Middle Office, Trading Platforms
+            </div>
+        </div>
+    </div>
+    <div class="title_1_content">
         <p class="title_2">Hobbies</p>
 
-        <div class="title_2_content" hidden>
-            <div class="sentence">Literature, cinema, football, running, history, internet, it, cooking...</div>
+        <div class="title_2_content" style="display:none">
+            <div class="sentence">Literature, cinema, football, running, history, internet, it, cooking...
+            </div>
+
+        </div>
+    </div>
+    <div class="title_1_content">
+        <p class="title_2 photo">How to find me</p>
+
+        <div class="title_2_content" style="display:none">
+            <div class="sentence">
+                <a href="http://danibuiza.wordpress.com/">blog</a>
+                <a href="https://github.com/danibuiza">gitHub</a>
+                <a href="about.me/danibuiza">about me</a>
+                <a href="https://www.xing.com/profile/DanielJose_GutierrezDiez">xing</a>
+                <a href="https://www.facebook.com/profile.php?id=554250456">facebook</a>
+                <a href="https://twitter.com/danibuiza">twitter</a>
+                <a href="https://www.linkedin.com/profile/view?id=10659921">linked in</a>
+                <a href="http://www.lastfm.es/user/danibuiza">last fm</a>
+                <a href="https://gist.github.com/danibuiza">Gists</a>
+                and everywhere if you search for <a href="https://www.google.de/?#q=danibuiza">danibuiza</a>
+            </div>
+
         </div>
     </div>
 </div>
-<div class="preview">
 
+<div class="preview">
+    <div id="text_preview"></div>
+    <div id="map_canvas" style="display:none"></div>
+    <div id="summary_preview" style="display:none">
+    </div>
 </div>
-<div class="footer" hidden>
+
+<div class="footer" style="display:none">
     <hr>
-    <p class="footer_text">This page is implemented using <a href="http://www.jquery.com">JQuery</a> and hosted in <a
-            href="https://pages.github.com/">GitHub Pages</a>; only for learning purposes</p>
+    <p class="footer_text">
+        This page is implemented using</p>
+
+        <ul>
+            <li><a href="http://www.jquery.com">JQuery</a></li>
+            <li><a href="http://code.google.com/p/jquery-ui-map/">jquery-ui-map</a></li>
+            <li><a href="https://developers.google.com/maps/">Google Maps API</a></li>
+            <li><p class="footer_text">and hosted in</p> <a href="https://pages.github.com/">GitHub Pages</a>;
+
+        </ul>
+
+
 </div>
 </body>
 </html>
