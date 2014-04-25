@@ -22,8 +22,7 @@ main use cases and data model features:
 - extras to play with maps and some jquery effects
 
 still todo:
-- zoom in the maps
-- zooming in and out in the map does not work, some africa region is shown in the background...
+DONE - zoom in the maps
 - add marker with some info in the point center
 - rebrush styles and structure
 - add pdf to download that slides
@@ -37,20 +36,27 @@ still todo:
 - retrieve list of cvs
 - search engine
 - put more info
-- slider menu
+DONE more or less - slider menu
 
 
 
 bugs:
+all:
+- minimize browser and things are ugly
+- elements loose control when minimizing
+- zooming in and out in the map does not work, some africa region is shown in the background...
+
+
 iexplorer:
-- internet explorer does not load correctly, everything is expanded on loading
-- div with map is visible with a grey background at the loading
-- maps are not shown
-- load html does not work -> load will be deleted
-- somehow works now, probably something to do with the cache
-- hover() method jquery does not work properly on IE? cannot believe it...
+- minimize browser and things are ugly
+DONE - internet explorer does not load correctly, everything is expanded on loading
+DONE - div with map is visible with a grey background at the loading
+DONE - maps are not shown
+DONE - load html does not work -> load will be deleted
+DONE - somehow works now, probably something to do with the cache
+DONE - hover() method jquery does not work properly on IE? cannot believe it...-> probably the problem is just that someths were cached
 
 chrome:
--load html does not work -> probably load cannot be used
+DONE -load html does not work -> probably load cannot be used in chrome locally
 
 
