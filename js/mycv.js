@@ -8,7 +8,19 @@ $(function()
 
     var professional_experience = { "Interactive Data" : "IDMS", "Accenture" : "Accenture", "Indra Group" : "Indra", "MGM Group" : "MGM", "Hidrocantabrico, EDP Group" : "EDP" };
 
-
+    $('.slider-arrow').click(function()
+    {
+        if ($(this).css("margin-right") == "200px") {
+            $('.panel').animate({"margin-right" : '-=200'}, 700);
+            $('.slider-arrow').animate({"margin-right" : '-=200'});
+            $(".panel_links").hide(700);
+        }
+        else {
+            $('.panel').animate({"margin-right" : '+=200'}, 700);
+            $('.slider-arrow').animate({"margin-right" : '+=200'}, 700);
+            $(".panel_links").show(700);
+        }
+    });
 
     $(".footer").toggle().appendTo($(".menu_and_content"));
 
@@ -16,7 +28,13 @@ $(function()
     {
         console.log("photo");
 
-        $("<img src='../resources/foto_dani.PNG'>").appendTo($(".text_preview"));
+        $("#map_canvas").hide();
+        $("#image_dani").toggle();
+    });
+
+    $("#image_dani").click(function(){
+       console.log("image dani");
+        $("#image_dani").toggle();
     });
 
     $(".title_1").click(function()
@@ -63,7 +81,9 @@ $(function()
 
                 $('#map_canvas').gmap({'center' : yourStartLatLng, 'zoom' : 15});
 
-                $("#map_canvas").show().gmap('refresh');
+                $("#image_dani").hide();
+
+                $("#map_canvas").toggle().gmap('refresh');
 
             }
         });

@@ -21,8 +21,8 @@
 
 .footer_text
 {
-    font-size       : x-small;
-    font-family     : Cambria;
+    font-size   : x-small;
+    font-family : Cambria;
 }
 
 .title_2_content
@@ -43,38 +43,61 @@
     font-size : medium;
 }
 
+#map_canvas
+{
+    position         : relative;
+    width            : 600px;
+    height           : 600px;
+    background-color : #CCC;
+
+}
+
+.professional_experience
+{
+    margin-left : 5px;
+}
+
+.place
+{
+    margin-left : 5px;
+}
+
 .menu_and_content
 {
     float : left;
-    width : 50%;
+    width : 300px;
 }
 
 .preview
 {
-    float : right;
-    width : 50%;
+    top          : 50px;
+    width        : 400px;
+    height       : 200px;
+    position     : fixed;
+    right        : 600px;
+    margin-right : -200px;
 
 }
 
-#map_canvas {
-    position: relative;
-    width: 800px;
-    height: 800px;
-    background-color: #CCC;
+.panel
+{
+    top          : 10px;
+    width        : 300px;
+    height       : 200px;
+    position     : fixed;
+    right        : 0px;
+    margin-right : -200px;
 
 }
 
-.professional_experience{
-    margin-left: 5px;
+.slider-arrow
+{
+    top             : 10px;
+    padding         : 5px;
+    width           : 10px;
+    font            : 400 12px Arial, Helvetica, sans-serif;
+    color           : #000;
+    text-decoration : none;
+    position        : fixed;
+    right           : 0px;
 }
-
-
-.place{
-    margin-left: 5px;
-}
-
-
-
-
-
-
