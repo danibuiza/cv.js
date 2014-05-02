@@ -4,8 +4,12 @@
  * Copyright (c) 2010 - 2012 Johan Säll Larsson
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
  */
+
+
+
+
 ( function($) {
-	
+
 	/**
 	 * @param name:string
 	 * @param prototype:object
@@ -337,7 +341,8 @@
 		},
 		
 		addEventListener: function(eventType, eventDataOrCallback, eventCallback) {
-			if ( google.maps && this[0] instanceof google.maps.MVCObject ) {
+			/*console.log(this[0]);
+            if ( google.maps && this[0] instanceof google.maps.MVCObject ) {
 				google.maps.event.addListener(this[0], eventType, eventDataOrCallback);
 			} else {
 				if (eventCallback) {
@@ -347,7 +352,13 @@
 				} 
 			}
 			return this;
-		}
+*/
+            if (eventCallback) {
+                this.bind(eventType, eventDataOrCallback, eventCallback);
+            } else {
+                this.bind(eventType, eventDataOrCallback);
+            }
+        }
 		  
 		/*removeEventListener: function(eventType) {
 			if ( google.maps && this[0] instanceof google.maps.MVCObject ) {

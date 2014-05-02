@@ -2,7 +2,7 @@ cv.js (in progress) (the objective is just to learn how to use jquery)
 =====
 
 dependencies:
--jquery, google-maps, jquery-ui-maps
+-jquery, google-maps, jquery-ui-maps, requirejs
 
 info:
 -Jquery based tool to generate cvs
@@ -60,3 +60,15 @@ chrome:
 DONE -load html does not work -> probably load cannot be used in chrome locally
 
 
+
+hacks/requirejs:
+
+in order to load google maps properly something like this has to be done in the file where the maps are used:
+
+require(['http://maps.googleapis.com/maps/api/js?sensor=true&callback=gmapsLoaded']);
+
+gmapsLoaded should be initialized using jquery.Deferred()
+
+couple of changes in the ui map library in order to make it work with require.js:
+    -google.maps.MVCObject not recognized, so commented
+    - passed google as dependency via require
